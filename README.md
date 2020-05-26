@@ -1,7 +1,4 @@
-# scrape_the_web
-# python_frameworks
-
-Scrape the web to rank a list of known python frameworks
+# Scrape the web to rank a list of known python frameworks
 
 USAGE
   scrape_the_web_python_frameworks framework1, framework2 [,framework_N]
