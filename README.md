@@ -19,11 +19,9 @@ web2py -  9,200,123
 
 Uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#), [Requests](https://requests.readthedocs.io/en/master/) and [Google results](https://www.google.com/search?q=python+django) to pull it all together.
 
-* **BeautifulSoup** - Python library used for pulling data out of HTML and XML files
-
-* **Requests** - Python HTTP library. Used to read the contents a website using the <b>get</b> function.
-
-* **Google query** - get the for the various framework rankings as HTML
+* **BeautifulSoup** - Python library used for pulling data out of HTML and XML files 
+* **Requests** - Python HTTP library. Used to read the contents a website using the <b>get</b> function 
+* **Google query** - get the for the various framework rankings as HTML 
 
 For example, a google search for python and django, yields, among other things:
 
@@ -39,16 +37,16 @@ We can do this for all the pyhton frameworks and rank the results.
 
 Here is one method of automating this task.
 
-Use the **get** function of **Requests** to get the HTML contents of a **Google query** on **python** and the **xxx_framework**, where **xxx_frameworks** is **django**, **flask**, **web2py** etc
+1. Use the **get** function of **Requests** to get the HTML contents of a **Google query** on **python** and the **xxx_framework**, where **xxx_frameworks** is **django**, **flask**, **web2py** etc
 
               requests.get('https://www.google.com/search?q=python+django')
               
- Use **BeautifulSoup** to look for the id result-stat, and save the number found
+2. Use **BeautifulSoup** to look for the id result-stat, and save the number found
         
               soup = BeautifulSoup(requests.get('https://www.google.com/search?q=python+django'), 'html.parser')
               get_number_from(soup.find(id="result-stat"))
               
         
- Rinse and repeat
+ 3. Repeat for each framework
         
- Rank the results, with the highest number first
+ 4. Rank the results, with the highest-numbered framework first
