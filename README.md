@@ -2,11 +2,11 @@
 
 USAGE
 
-        scrape_the_web_python_frameworks framework1, framework2 [,framework_N]
+        python scrape_the_web_python_frameworks.py framework1, framework2 [,framework_N]
   
         e.g.
   
-        scrape_the_web_python_frameworks django, web2py, cherrypi, flask, bottle, quixote
+        python scrape_the_web_python_frameworks.py django, web2py, cherrypi, flask, bottle, quixote
   
 OUTPUT
 
@@ -19,11 +19,12 @@ OUTPUT
 LIBRARIES USED
 
         Uses BeautifulSoup, Requests and Google results to pull it all together.
+        
           BeautifulSoup is a Python library used for pulling data out of HTML and XML files
-          Requests is a Python HTTP library. In this case it is used to read the contents a website using the get function.
+          Requests is a Python HTTP library. Used to read the contents a website using the <b>get</b> function.
           The Google query is used to get the HTML for the various rankings
 
-For example, a google search for python and django, yields, among ohter things:
+For example, a google search for python and django, yields, among other things:
 
         About 48,500,000 results (0.52 seconds)
         
@@ -34,6 +35,7 @@ and another search for python and flask yields:
 We can do this for all the pyhton frameworks and rank the results.
 
 AUTOMATING (using Python)
+
 Here is one method of automating this task.
 
         Use the get function of Requests to get the contents of a Google query on python and the xxx_framework, 
