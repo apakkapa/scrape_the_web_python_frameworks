@@ -1,6 +1,7 @@
 # Scrape the web to rank a list of known python frameworks
 
 USAGE
+
         scrape_the_web_python_frameworks framework1, framework2 [,framework_N]
   
         e.g.
@@ -8,6 +9,7 @@ USAGE
         scrape_the_web_python_frameworks django, web2py, cherrypi, flask, bottle, quixote
   
 OUTPUT
+
         django - 43,122,190
         flask  - 20,101,200
         ...
@@ -15,6 +17,7 @@ OUTPUT
  
 
 LIBRARIES USED
+
         Uses BeautifulSoup, Requests and Google results to pull it all together.
           BeautifulSoup is a Python library used for pulling data out of HTML and XML files
           Requests is a Python HTTP library. In this case it is used to read the contents a website using the get function.
